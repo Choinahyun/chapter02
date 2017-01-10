@@ -14,6 +14,16 @@ public class SongApp {
 		song.setYear(2010);
 		
 		song.show();
+		
+		Song song2 = new Song ("첫눈처럼 너에게 가겠다", "에일리", null, null, 2017, 0);
+		song2.show();
+		
+		Song song3 = new Song("Beautiful", "크러쉬");
+		song3.show();
+		
+		Song song4 = new Song ("소원", "어반자카파");
+		song4.show();
+	
 	}
 
 }

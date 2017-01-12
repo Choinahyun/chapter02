@@ -28,17 +28,23 @@ public class TV {
 	}
 	
 	public void channel (int channel) {
-		if (channel >= 1 && channel <= 255) {
-			this.channel = channel;
+		if ( channel < 1) {
+			this.channel = 1;
+			return;
 		}
-		else {
-			System.out.println("다시 입력해주세요.");
+		
+		if ( channel > 255) {
+			this.channel = 255;
+			return;
 		}
+		
+		this.channel ++;
 	}
 	
 	public void channel (boolean channel) {
 		
 		if (channel == true) {
+			
 			if (this.channel == 255) {
 				this.channel = 1;
 			}
@@ -57,12 +63,17 @@ public class TV {
 	}
 	
 	public void volume (int vol) {
-		if (vol >= 0 && vol <= 100) {
-			this.volume = vol;
+		if ( vol < 0) {
+			this.volume = 0;
+			return;
 		}
-		else {
-			System.out.println("다시 입력해주세요.");
+		
+		if ( vol > 100) {
+			this.volume = 100;
+			return;
 		}
+		
+		this.volume ++;
 	}
 	
 	public void volume (boolean vol) {
